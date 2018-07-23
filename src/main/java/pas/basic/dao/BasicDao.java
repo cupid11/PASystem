@@ -1,12 +1,11 @@
-package demo.basic.dao;
+package pas.basic.dao;
 
 import com.github.pagehelper.PageHelper;
-import demo.user.model.User;
+import pas.user.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import tk.mybatis.mapper.common.Mapper;
 import tk.mybatis.mapper.entity.Example;
 
-import javax.persistence.OrderBy;
 import java.util.List;
 
 public class BasicDao<T> {
@@ -18,7 +17,6 @@ public class BasicDao<T> {
     }
 
     public List<T> findAll(){
-        // return mapper.selectAll();
         Example example = new Example(User.class);
         example.setOrderByClause("id DESC");
 
@@ -29,7 +27,7 @@ public class BasicDao<T> {
         mapper.deleteByPrimaryKey(id);
     }
 
-    public int storeUser(T t){
+    public int store(T t){
         return mapper.insert(t);
     }
 

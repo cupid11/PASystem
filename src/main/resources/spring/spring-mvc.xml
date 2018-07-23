@@ -13,7 +13,7 @@
 
 	<!-- 使用注解方式完成映射 -->
 	<!-- 让扫描spring扫描这个包下所有的类，让标注spring注解的类生效 -->
-	<context:component-scan base-package="demo" />
+	<context:component-scan base-package="pas" />
 	<!-- 开启注解 -->
 	<mvc:annotation-driven>
 		<mvc:message-converters register-defaults="true">
@@ -60,7 +60,7 @@
         <!-- 视图拦截器 -->
         <mvc:interceptor>
             <mvc:mapping path="/**" />
-            <bean class="demo.basic.interceptor.ViewInterceptor" />
+            <bean class="pas.basic.interceptor.ViewInterceptor" />
         </mvc:interceptor>
     </mvc:interceptors>
 	

@@ -1,4 +1,4 @@
-package demo.user.model;
+package pas.model;
 
 import javax.persistence.Id;
 import javax.persistence.Table;

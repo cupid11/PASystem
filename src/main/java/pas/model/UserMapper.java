@@ -1,4 +1,4 @@
-package demo.user.model;
+package pas.model;
 
 import tk.mybatis.mapper.common.Mapper;
 

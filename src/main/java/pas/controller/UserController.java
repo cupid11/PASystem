@@ -1,17 +1,13 @@
-package demo.user.controller;
+package pas.controller;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import demo.user.model.User;
-import demo.user.service.UserService;
+import pas.model.User;
+import pas.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-@RequestMapping(value = "/user", produces = "application/json;charset=UTF-8")
+@RequestMapping(value = "/users", produces = "application/json;charset=UTF-8")
 public class UserController {
 
     private UserService userService;
@@ -28,7 +24,7 @@ public class UserController {
     @GetMapping(value = "/allUsers")
     @ResponseBody
     public Object allUsers() {
-        return userService.allUser();
+        return userService.all();
     }
 
     @RequestMapping(value = "/queryByPage", method = RequestMethod.GET)
@@ -40,7 +36,7 @@ public class UserController {
     @GetMapping(value = "/show/{id}")
     @ResponseBody
     public Object show(@PathVariable("id") Long id) {
-        return userService.findUserById(id);
+        return userService.findById(id);
     }
 
     @DeleteMapping(value = "/{id}")
@@ -52,6 +48,6 @@ public class UserController {
     @PostMapping(value = "/store")
     @ResponseBody
     public int store(@RequestBody User user) {
-        return userService.storeUser(user);
+        return userService.store(user);
     }
 }

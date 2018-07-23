@@ -1,6 +1,6 @@
-package demo.user.dao;
+package pas.dao;
 
-import demo.basic.dao.BasicDao;
+import pas.basic.dao.BasicDao;
 import org.springframework.stereotype.Repository;
 
 

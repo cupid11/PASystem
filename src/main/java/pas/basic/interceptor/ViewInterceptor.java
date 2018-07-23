@@ -1,4 +1,4 @@
-package demo.basic.interceptor;
+package pas.basic.interceptor;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
