@@ -1,6 +1,6 @@
 package pas.basic.mybatis;
 
-import pas.user.model.User;
+import pas.model.User;
 import org.apache.ibatis.builder.StaticSqlSource;
 import org.apache.ibatis.executor.Executor;
 import org.apache.ibatis.mapping.*;

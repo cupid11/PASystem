@@ -1,7 +1,7 @@
 package pas.basic.dao;
 
 import com.github.pagehelper.PageHelper;
-import pas.user.model.User;
+import pas.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import tk.mybatis.mapper.common.Mapper;
 import tk.mybatis.mapper.entity.Example;
@@ -15,6 +15,8 @@ public class BasicDao<T> {
     public T findOneById(Long id){
         return mapper.selectByPrimaryKey(id);
     }
+
+
 
     public List<T> findAll(){
         Example example = new Example(User.class);

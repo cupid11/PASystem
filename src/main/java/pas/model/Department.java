@@ -1,12 +1,22 @@
 package pas.model;
 
+import javax.persistence.Id;
+import javax.persistence.Table;
+import java.util.HashSet;
+import java.util.Set;
+
+@Table(name = "departments")
 public class Department {
+
+    @Id
 
     private Long id = null;
 
     private String name = null;
 
     private Long parent_id = null;
+
+    private String description = null;
 
     private String created_at = null;
 
@@ -50,5 +60,16 @@ public class Department {
 
     public void setUpdated_at(String updated_at) {
         this.updated_at = updated_at;
+    }
+
+    @Override
+    public String toString() {
+        return "Department{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", parent_id=" + parent_id +
+                ", created_at='" + created_at + '\'' +
+                ", updated_at='" + updated_at + '\'' +
+                '}';
     }
 }

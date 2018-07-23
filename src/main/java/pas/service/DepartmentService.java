@@ -1,7 +1,10 @@
 package pas.service;
 
+import org.springframework.stereotype.Service;
 import pas.basic.service.BasicService;
 
-public class DepartmentService extends BasicService {
+@Service
+public class DepartmentService extends BasicService
+{
     //
 }

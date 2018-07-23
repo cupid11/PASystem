@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping(value = "/users", produces = "application/json;charset=UTF-8")
-public class UserController {
+public class
+UserController {
 
     private UserService userService;
 
