@@ -8,11 +8,12 @@ import java.util.List;
 public class BasicService<T> {
 
     @Autowired
-    private BasicDao <T> BasicDao;
+    private BasicDao<T> BasicDao;
 
     public List<T> all() {
         return BasicDao.findAll();
     }
+
 
     public Object findById(Long id) {
         return BasicDao.findOneById(id);

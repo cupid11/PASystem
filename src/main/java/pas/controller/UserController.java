@@ -1,15 +1,13 @@
 package pas.controller;
 
-import pas.model.User;
 import pas.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-@RequestMapping(value = "/users", produces = "application/json;charset=UTF-8")
-public class
-UserController {
+@RequestMapping(value = "/user")
+public class UserController {
 
     private UserService userService;
 
@@ -19,6 +17,7 @@ UserController {
 
     @GetMapping(value = "/")
     public String index() {
+        System.out.println("123");
         return "user-index";
     }
 
@@ -46,9 +45,9 @@ UserController {
         userService.deleteById(id);
     }
 
-    @PostMapping(value = "/store")
-    @ResponseBody
-    public int store(@RequestBody User user) {
-        return userService.store(user);
-    }
+//    @PostMapping(value = "/store")
+//    @ResponseBody
+//    public int store(@RequestBody User user) {
+//        return userService.store(user);
+//    }
 }

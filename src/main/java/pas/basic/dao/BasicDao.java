@@ -16,13 +16,13 @@ public class BasicDao<T> {
         return mapper.selectByPrimaryKey(id);
     }
 
-
-
     public List<T> findAll(){
-        Example example = new Example(User.class);
-        example.setOrderByClause("id DESC");
+//        Example example = new Example(User.class);
+//        example.setOrderByClause("id DESC");
+//
+//        return mapper.selectByExample(example);
+        return mapper.selectAll();
 
-        return mapper.selectByExample(example);
     }
 
     public void deleteById(Long id){

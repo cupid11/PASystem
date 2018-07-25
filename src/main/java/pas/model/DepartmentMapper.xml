@@ -3,8 +3,15 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--这块等于dao接口的实现 namespace必须和接口的类路径一样 -->
-<mapper namespace="pas.basic.dao.BasicDao">
-    <!--<select id="getDepartments" parameterType="Integer" resultType="pas.model.Department" >
-      select * from departments where parent_id=#{parent_id}
-    </select>-->
+<mapper namespace="pas.model.DepartmentMapper">
+    <!--<resultMap id="getSelf" type="pas.model.DepartmentMapper">-->
+        <!--<id column="id" property="id"></id>-->
+        <!--<result column="name" property="Name"></result>-->
+        <!--&lt;!&ndash;//这里可以不用指定oftype 使用反向查询select从另一个maper文件中取出数据时必须用ofType&ndash;&gt;-->
+        <!--<collection property="departmentSet" select="getDepartment" column="id"></collection>-->
+        <!--&lt;!&ndash;查到的cid作为下次的pid&ndash;&gt;-->
+    <!--</resultMap>-->
+    <!--<select id="getAllDepartments" resultMap="getSelf" >-->
+      <!--select * from departments where parent_id=#{parent_id}-->
+    <!--</select>-->
 </mapper>

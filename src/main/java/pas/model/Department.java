@@ -7,14 +7,12 @@ import java.util.Set;
 
 @Table(name = "departments")
 public class Department {
-
     @Id
-
-    private Long id = null;
+    private Integer id = null;
 
     private String name = null;
 
-    private Long parent_id = null;
+    private Integer parent_id = null;
 
     private String description = null;
 
@@ -22,11 +20,13 @@ public class Department {
 
     private String updated_at = null;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    // private Set<Department> departmentSet = new HashSet<Department>();
+
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -38,12 +38,20 @@ public class Department {
         this.name = name;
     }
 
-    public Long getParent_id() {
+    public Integer getParent_id() {
         return parent_id;
     }
 
-    public void setParent_id(Long parent_id) {
+    public void setParent_id(Integer parent_id) {
         this.parent_id = parent_id;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getCreated_at() {
@@ -62,12 +70,21 @@ public class Department {
         this.updated_at = updated_at;
     }
 
+//    public Set<Department> getDepartmentSet() {
+//        return departmentSet;
+//    }
+//
+//    public void setDepartmentSet(Set<Department> departmentSet) {
+//        this.departmentSet = departmentSet;
+//    }
+
     @Override
     public String toString() {
         return "Department{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", parent_id=" + parent_id +
+                ", description='" + description + '\'' +
                 ", created_at='" + created_at + '\'' +
                 ", updated_at='" + updated_at + '\'' +
                 '}';
