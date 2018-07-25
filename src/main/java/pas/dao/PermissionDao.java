@@ -2,9 +2,9 @@ package pas.dao;
 
 import org.springframework.stereotype.Repository;
 import pas.basic.dao.BasicDao;
-import pas.model.Department;
+import pas.model.Permission;
 
 @Repository
-public class DepartmentDao extends BasicDao<Department>{
-
+public class PermissionDao extends BasicDao<Permission> {
+    //
 }

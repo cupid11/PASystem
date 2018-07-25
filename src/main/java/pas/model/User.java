@@ -6,7 +6,6 @@ import javax.persistence.Table;
 @Table(name = "users")
 public class User {
 	@Id
-
 	private Integer id = null;
 
 	private String name = null;

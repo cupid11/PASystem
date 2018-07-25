@@ -12,7 +12,8 @@ public class BasicDao<T> {
     @Autowired
     private Mapper<T> mapper = null;
 
-    public T findOneById(Long id){
+    public T findOneById(Integer
+                                 id){
         return mapper.selectByPrimaryKey(id);
     }
 
@@ -25,7 +26,7 @@ public class BasicDao<T> {
 
     }
 
-    public void deleteById(Long id){
+    public void deleteById(Integer id){
         mapper.deleteByPrimaryKey(id);
     }
 

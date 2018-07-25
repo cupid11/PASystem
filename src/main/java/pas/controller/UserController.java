@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-@RequestMapping(value = "/user")
+@RequestMapping(value = "/user", produces = "application/json;charset=UTF-8")
 public class UserController {
 
     private UserService userService;
@@ -15,11 +15,11 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping(value = "/")
-    public String index() {
-        System.out.println("123");
-        return "user-index";
-    }
+//    @GetMapping(value = "/")
+//    public String index() {
+//        System.out.println("123");
+//        return "user-index";
+//    }
 
     @GetMapping(value = "/allUsers")
     @ResponseBody
@@ -33,15 +33,16 @@ public class UserController {
         return userService.queryByPage(page, pageSize);
     }
 
+
     @GetMapping(value = "/show/{id}")
     @ResponseBody
-    public Object show(@PathVariable("id") Long id) {
+    public Object show(@PathVariable("id") Integer id) {
         return userService.findById(id);
     }
 
     @DeleteMapping(value = "/{id}")
     @ResponseBody
-    public void delete(@PathVariable("id") Long id) {
+    public void delete(@PathVariable("id") Integer id) {
         userService.deleteById(id);
     }
 

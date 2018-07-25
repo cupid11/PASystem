@@ -14,12 +14,11 @@ public class BasicService<T> {
         return BasicDao.findAll();
     }
 
-
-    public Object findById(Long id) {
+    public Object findById(Integer id) {
         return BasicDao.findOneById(id);
     }
 
-    public void deleteById(Long id){
+    public void deleteById(Integer id){
         BasicDao.deleteById(id);
     }
 
